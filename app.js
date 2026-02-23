@@ -1,1 +1,6 @@
-﻿console.log('Hello Node Lab');
+﻿const fs = require("fs");
+
+fs.readFile("file.txt", "utf8", (err, data) => {
+    if (err) throw err;
+    console.log("File content:", data);
+});
